@@ -23,6 +23,13 @@ jobs:
         with:
           node-version: '20.x'
 
+      - name: Log current directory and contents
+        run: |
+          echo "Current working directory:"
+          pwd
+          echo "Listing contents:"
+          ls -la
+
       - name: npm install, build, and test
         working-directory: Vendorportal
         run: |
