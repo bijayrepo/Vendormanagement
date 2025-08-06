@@ -6,11 +6,14 @@ import { AppState } from '../../../app/state/Vendor/app.state';
 import * as VendorActions from '../../../app/state/Vendor/actions/vendor.actions';
 import { MatCard } from "@angular/material/card";
 import { MatInputModule } from "@angular/material/input";
+import { NgIf } from '@angular/common';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @Component({
   selector: 'app-registration-form',
-  imports: [MatCard, MatInputModule,ReactiveFormsModule],
+  imports: [MatCard, MatInputModule,ReactiveFormsModule,ReactiveFormsModule, NgIf, MatFormFieldModule, MatInputModule, MatButtonModule],
   templateUrl: './registration-form.html',
   styleUrl: './registration-form.css'
 })
@@ -76,7 +79,7 @@ export class RegistrationForm {
       };
       console.log(vendor)
       this.store.dispatch(VendorActions.addVendor({ vendor }));
-      this.registrationForm.reset();
+      //this.registrationForm.reset();
     } else {
       this.registrationForm.markAllAsTouched();
     }

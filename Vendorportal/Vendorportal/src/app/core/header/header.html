@@ -1,18 +1,12 @@
-<header [class.scrolled]="isScrolled" class="sticky-header">
+<header class="navbar">
   <div class="logo">NexaData Cloud</div>
-  
-  <!-- Desktop Navigation -->
-  <nav class="nav-links" [class.active]="menuOpen">
+  <nav [class.active]="menuOpen">
     <a routerLink="/" routerLinkActive="active" (click)="closeMenu()">Home</a>
-    <a routerLink="/registration" routerLinkActive="active" (click)="closeMenu()">Registration</a>
+    <a routerLink="/vendors" routerLinkActive="active" (click)="closeMenu()">Vendors</a>
     <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a>
     <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a>
   </nav>
-
-
-  <div class="hamburger" (click)="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
+  <div class="menu-toggle" (click)="toggleMenu()">
+    &#9776;
   </div>
 </header>

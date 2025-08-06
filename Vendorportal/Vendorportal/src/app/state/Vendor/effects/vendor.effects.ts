@@ -19,8 +19,8 @@ export class VendorEffects {
       )
     )
   );
-
   addVendor$ = createEffect(() =>
+    
     this.actions$.pipe(
       ofType(VendorActions.addVendor),
       mergeMap(action =>
@@ -31,4 +31,5 @@ export class VendorEffects {
       )
     )
   );
+  
 }

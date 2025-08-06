@@ -6,10 +6,11 @@ import { Vendor } from '../model/vendeor.model';
   providedIn: 'root'
 })
 export class VendorService {
-  private apiUrl="";
+  private apiUrl="http://localhost:5287/api/";
   constructor(private http:HttpClient){}
   addVendor(vendor: Vendor): Observable<Vendor[]> {
-    return this.http.post<Vendor[]>(`${this.apiUrl}/vendors`, vendor);
+    console.log('Api call');
+    return this.http.post<Vendor[]>(`${this.apiUrl}/Vendors/register`, vendor);
   }
   getVendor(): Observable<Vendor[]>{
     return this.http.get<Vendor[]>(this.apiUrl);

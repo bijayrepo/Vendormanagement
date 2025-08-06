@@ -1,26 +1,23 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, ViewChild } from '@angular/core';
+import { MatToolbar } from "@angular/material/toolbar";
+import { MatSidenav, MatSidenavContainer, MatSidenavModule } from "@angular/material/sidenav";
+import { MatNavList } from "@angular/material/list";
+import { MatIconModule } from "@angular/material/icon";
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [MatToolbar, MatSidenavContainer, MatNavList, MatIconModule, MatSidenavModule],
   templateUrl: './header.html',
   styleUrl: './header.css'
 })
 export class Header {
-  isScrolled = false;
-  @HostListener('window:scroll', [])
   menuOpen = false;
-
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    this.isScrolled = window.scrollY > 50;
-  }
-
-  toggleMenu() {
+   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
   }
 
-  closeMenu() {
+  closeMenu(): void {
     this.menuOpen = false;
   }
+ 
 }
