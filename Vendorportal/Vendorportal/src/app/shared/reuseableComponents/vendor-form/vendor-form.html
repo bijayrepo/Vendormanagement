@@ -1,0 +1,58 @@
+<form [formGroup]="vendorForm" (ngSubmit)="submitForm()" class="p-4 border rounded shadow-sm bg-light">
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label class="form-label">Company Name *</label>
+      <input formControlName="companyName" type="text" class="form-control" placeholder="Enter company name">
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Contact Name *</label>
+      <input formControlName="contactName" type="text" class="form-control" placeholder="Enter contact name">
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label class="form-label">Contact Email *</label>
+      <input formControlName="contactEmail" type="email" class="form-control" placeholder="Enter contact email">
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Contact Phone *</label>
+      <input formControlName="contactPhone" type="text" class="form-control" placeholder="Enter contact phone">
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Address *</label>
+    <input formControlName="address" type="text" class="form-control" placeholder="Enter address">
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-4">
+      <label class="form-label">City *</label>
+      <input formControlName="city" type="text" class="form-control" placeholder="Enter city">
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">State*</label>
+      <input formControlName="state" type="text" class="form-control" placeholder="Enter state">
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">Country *</label>
+      <input formControlName="country" type="text" class="form-control" placeholder="Enter country">
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label class="form-label">GST Number</label>
+      <input formControlName="gstNumber" type="text" class="form-control" placeholder="Enter GST number">
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">PAN Number</label>
+      <input formControlName="panNumber" type="text" class="form-control" placeholder="Enter PAN number">
+    </div>
+  </div>
+
+  <div class="text-end">
+    <button type="submit" class="btn btn-primary px-4">Submit</button>
+  </div>
+</form>
