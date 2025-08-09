@@ -1,0 +1,15 @@
+.custom-primary-btn {
+  background-color: #3f51b5;
+  border-color: #3f51b5;
+  color: white;
+}
+
+.custom-primary-btn:hover {
+  background-color: #303f9f; /* Slightly darker shade for hover */
+  border-color: #303f9f;
+}
+
+.custom-label {
+  color: #3f51b5;
+  font-weight: 600;
+}
