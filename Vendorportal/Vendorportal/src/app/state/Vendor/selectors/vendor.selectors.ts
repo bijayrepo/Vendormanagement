@@ -1,7 +1,10 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { VendorState } from '../reducers/vendor.reducer';
+import { AppState } from '../app.state';
 
 export const selectVendorState=createFeatureSelector<VendorState>('vendor');
+
+
 
 export const selectAllVendorState=createSelector(selectVendorState,state=>state.vendors);
 export const selectVendorLoading = createSelector(selectVendorState, state => state.loading);

@@ -78,6 +78,7 @@ export class RegistrationForm {
         updatedAt: new Date(),
       };
       console.log(vendor)
+      //this.store.dispatch(addVendor({ vendor: formValue }));
       this.store.dispatch(VendorActions.addVendor({ vendor }));
       //this.registrationForm.reset();
     } else {

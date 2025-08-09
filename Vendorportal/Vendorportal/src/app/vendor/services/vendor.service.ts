@@ -9,10 +9,11 @@ export class VendorService {
   private apiUrl="http://localhost:5287/api/";
   constructor(private http:HttpClient){}
   addVendor(vendor: Vendor): Observable<Vendor[]> {
-    console.log('Api call');
-    return this.http.post<Vendor[]>(`${this.apiUrl}/Vendors/register`, vendor);
+    console.log('API Call: Add Vendor', vendor);
+    return this.http.post<Vendor[]>(`${this.apiUrl}/register`, vendor);
   }
-  getVendor(): Observable<Vendor[]>{
-    return this.http.get<Vendor[]>(this.apiUrl);
+
+  getVendors(): Observable<Vendor[]> {
+    return this.http.get<Vendor[]>(`${this.apiUrl}`);
   }
 }

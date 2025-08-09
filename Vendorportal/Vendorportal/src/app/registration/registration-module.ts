@@ -6,7 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { reducer as vendorReducer } from '../state/Vendor/reducers/vendor.reducer';
+import { reducer } from '../state/Vendor/reducers/vendor.reducer';
 import { VendorEffects } from '../state/Vendor/effects/vendor.effects';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -24,7 +24,11 @@ import { MatGridListModule } from '@angular/material/grid-list';
     HttpClientModule,
     RegistrationRoutingModule,
     RegistrationForm,
-    StoreModule.forRoot({ vendor: vendorReducer }),
+    //StoreModule.forRoot({}),
+    
+    StoreModule.forRoot({ vendor: reducer }),
+    //EffectsModule.forFeature([VendorEffects]),
+
     EffectsModule.forRoot([VendorEffects]),
     ReactiveFormsModule,
     MatFormFieldModule,

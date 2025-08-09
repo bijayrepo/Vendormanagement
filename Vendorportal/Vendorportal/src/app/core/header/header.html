@@ -2,7 +2,8 @@
   <div class="logo">NexaData Cloud</div>
   <nav [class.active]="menuOpen">
     <a routerLink="/" routerLinkActive="active" (click)="closeMenu()">Home</a>
-    <a routerLink="/vendors" routerLinkActive="active" (click)="closeMenu()">Vendors</a>
+    <a routerLink="/vendor/registartion" routerLinkActive="active" (click)="goToVendorPage()">Registration</a>
+        <a routerLink="/vendor/registartion" routerLinkActive="active" (click)="goToVendorPage()">Login</a>
     <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a>
     <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a>
   </nav>
