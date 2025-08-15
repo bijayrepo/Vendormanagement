@@ -1,3 +1,3 @@
 export const environment = {
-    apiurl:""
+     apiurl:"https://nextdatawebapi-dhethjc3cchnc0gy.canadacentral-01.azurewebsites.net/api/"
 };

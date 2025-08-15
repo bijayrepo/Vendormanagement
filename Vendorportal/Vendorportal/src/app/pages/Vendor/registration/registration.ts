@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { shareModule } from '../../../core/Shared/shared';
 import { VendorForm } from "../../../shared/reuseableComponents/vendor-form/vendor-form";
 import { IVendor } from '../../../core/models/interfaces/vendor';
-import { VendorService } from '../../../vendor/services/vendor.service'; 
+import { Vendorservices } from '../../../core/services/vendor'; 
 
 @Component({
   selector: 'app-registration',
@@ -25,12 +25,10 @@ vendorData:IVendor = {
   createdAt: new Date(),
   updatedAt: new Date()
 };
-constructor(private Vendorservices:VendorService){}
+constructor(private Vendorservices:Vendorservices){}
 saveVendor(vendor:any){
-  console.log('Vendor form submitted:',vendor);
   this.Vendorservices.addVendor(vendor).subscribe({
     next:(res)=>{
-      console.log('Vendor saved',res);
       alert('Verdor saved successfully!');
     },
     error:(err)=>{

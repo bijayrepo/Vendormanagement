@@ -1,11 +1,12 @@
 export const Constant={
     MODULE_NAME:{
-        Vendor:'Vendor'
+        Vendor:'Vendors',
+        User:'Users'
     },
     API_METHODS:{
         Vendor_Service:{
-            Get_All_Vendors:'GetAllVendors',
-            Add_Vendor:'AddVendor'
+            Get_All_Vendors:'/GetAllVendors',
+            Add_Vendor:'/register'
         }
     },
     VALIDATION_MESSAGE:{

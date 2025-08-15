@@ -24,5 +24,8 @@ export class Header {
    goToVendorPage() {
     this.router.navigate(['/vendor/registartion']);
   }
+  goHome() {
+  this.router.navigate(['/']);
+}
  
 }

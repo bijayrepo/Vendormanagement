@@ -7,7 +7,6 @@ import { MainFooter } from './core/footer/main/main';
 import { MainHeader } from './core/header/main/main-header/main-header';
 import { VendorRoutingModule } from './Modules/vendor/vendor-routing-module';
 import { NgIf } from '@angular/common';
-import { Vendor } from "./Modules/layout/vendor/vendor";
 
 @Component({
   selector: 'app-root',
@@ -19,7 +18,6 @@ import { Vendor } from "./Modules/layout/vendor/vendor";
     MainFooter,
     MainHeader,
     VendorRoutingModule,
-    Vendor
 ],
   standalone:true,
   templateUrl: './app.html',

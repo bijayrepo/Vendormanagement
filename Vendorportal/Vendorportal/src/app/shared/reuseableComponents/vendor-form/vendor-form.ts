@@ -32,6 +32,7 @@ export class VendorForm implements OnInit {
   submitForm(){
     if(this.vendorForm.valid){
       this.formSubmit.emit(this.vendorForm.value);
+      this.vendorForm.reset();
     }else{
       this.vendorForm.markAsTouched();
     }

@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/8e36fe7c-7e66-49c7-8236-9f423a77eb52/resourceGroups/WebApp/providers/Microsoft.Web/sites/vendorportalmanagement",
+    "appService.deploySubpath": "dist"
+}
