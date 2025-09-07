@@ -1,0 +1,34 @@
+<div class="dashboard-container">
+
+  <!-- Analytics Dashboard -->
+  <section class="analytics">
+    <h2>Analytics Dashboard 📊</h2>
+    <!-- <apx-chart 
+      series="analyticsChartOptions.series" 
+      [chart]="analyticsChartOptions.chart" 
+      [xaxis]="analyticsChartOptions.xaxis">
+    </apx-chart> -->
+  </section>
+
+  <!-- Logs Dashboard -->
+  <section class="logs">
+    <h2>Log Dashboard 📝</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Action</th>
+          <th>User</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let log of logs">
+          <td>{{ log.time }}</td>
+          <td>{{ log.action }}</td>
+          <td>{{ log.user }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+</div>
