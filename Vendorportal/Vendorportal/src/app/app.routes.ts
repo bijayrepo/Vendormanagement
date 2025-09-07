@@ -11,6 +11,7 @@ import { Changepassword } from './Modules/auth/changepassword/changepassword';
 import { User } from './Modules/user/user';
 import { Dashboard } from './Modules/user/dashboard/dashboard';
 import { Profile } from './pages/User/profile/profile';
+import { PagesModule } from './pages/pages-module';
 
 NgModule({
   imports: [CoreModule, ReactiveFormsModule],
@@ -23,11 +24,30 @@ export const routes: Routes = [
   //         import('./registration/registration-routing-module').then(m=>m.RegistrationRoutingModule)
   // },
   // { path: '', redirectTo: '/registration', pathMatch: 'full' },
-  {
-    path: '', // empty path means root URL `/`
-    component: Home,
-    pathMatch: 'full', // ensures exact match for `/`
+
+  // {
+  //   path: '', // empty path means root URL `/`
+  //   component: Home,
+  //   pathMatch: 'full', // ensures exact match for `/`
+  // },
+   {
+    path: '',
+    redirectTo: 'Home',  // ✅ redirect empty path
+    pathMatch: 'full'    // ✅ important
   },
+  {
+    path: '',
+    component: PagesModule,  // parent layout module
+    children: [
+      {
+        path: 'Home',
+        component: Home,      // Home component
+      },
+      // other children routes
+    ]
+  },
+  // optional wildcard route
+  { path: '**', redirectTo: 'Home' },
   {
     path: 'vendor/registartion',
     component: Registration,
@@ -51,17 +71,17 @@ export const routes: Routes = [
     ],
   },
   {
-    path:'user',
-    component:User,
-    children:[
+    path: 'user',
+    component: User,
+    children: [
       {
-        path:'dashboard',
-        component:Dashboard
+        path: 'dashboard',
+        component: Dashboard,
       },
       {
-        path:'profile',
-        component:Profile
-      }
-    ]
-  }
+        path: 'profile',
+        component: Profile,
+      },
+    ],
+  },
 ];
