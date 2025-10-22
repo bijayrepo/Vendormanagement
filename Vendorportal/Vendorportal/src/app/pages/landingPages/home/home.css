@@ -1,0 +1,53 @@
+/* General */
+.primary-text {
+  color: #2d49e4;
+}
+
+.carousel-img {
+  height: 400px;
+  object-fit: cover;
+}
+
+.caption-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.intro-text {
+  max-width: 700px;
+  margin: auto;
+}
+
+.mission-text {
+  max-width: 800px;
+  font-size: 1.1rem;
+  margin: auto;
+}
+
+.service-icon {
+  font-size: 3rem;
+  color: #3f51b5;
+}
+
+.cta-section {
+  background-color: #3f51b5;
+}
+
+.cta-text {
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel-img {
+    height: 250px;
+  }
+
+  .intro-text,
+  .mission-text,
+  .cta-text {
+    font-size: 0.95rem;
+  }
+}

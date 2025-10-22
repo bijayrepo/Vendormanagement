@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgApexchartsModule, ApexChart, ApexXAxis, ApexAxisChartSeries } from 'ng-apexcharts';
+import { CommonModule } from '@angular/common';
 
 
 export type ChartOptions = {
@@ -11,7 +12,7 @@ export type ChartOptions = {
 
 @Component({
   selector: 'app-dashboard',
-  imports: [NgApexchartsModule],
+  imports: [NgApexchartsModule,CommonModule],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css'
 })
@@ -42,7 +43,7 @@ export class Dashboard implements OnInit {
   }
 
   ngOnInit(): void {
-    
+
   }
 
 }

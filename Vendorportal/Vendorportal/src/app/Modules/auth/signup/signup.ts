@@ -6,10 +6,11 @@ import {
   AbstractControl,
 } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-signup',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './signup.html',
   styleUrl: './signup.css',
 })
