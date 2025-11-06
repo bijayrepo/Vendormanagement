@@ -12,6 +12,7 @@ import { User } from './Modules/user/user';
 import { Dashboard } from './Modules/user/dashboard/dashboard';
 import { Profile } from './pages/User/profile/profile';
 import { PagesModule } from './pages/pages-module';
+import { ContactUs } from './pages/landingPages/contact-us/contact-us';
 
 NgModule({
   imports: [CoreModule, ReactiveFormsModule],
@@ -42,6 +43,10 @@ export const routes: Routes = [
       {
         path: 'Home',
         component: Home,      // Home component
+      },
+      {
+        path: 'ContactUs',
+        component: ContactUs,
       },
       // other children routes
     ]
