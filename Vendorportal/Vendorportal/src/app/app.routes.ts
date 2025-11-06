@@ -13,6 +13,7 @@ import { Dashboard } from './Modules/user/dashboard/dashboard';
 import { Profile } from './pages/User/profile/profile';
 import { PagesModule } from './pages/pages-module';
 import { ContactUs } from './pages/landingPages/contact-us/contact-us';
+import { About } from './pages/landingPages/about/about';
 
 NgModule({
   imports: [CoreModule, ReactiveFormsModule],
@@ -45,6 +46,10 @@ export const routes: Routes = [
         component: Home,      // Home component
       },
       {
+        path: 'About',
+        component: About,
+      },
+       {
         path: 'ContactUs',
         component: ContactUs,
       },
