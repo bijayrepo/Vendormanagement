@@ -100,6 +100,3 @@ This project is a modular web-based platform designed to manage user registratio
 - Integration with payment gateways
 - Mobile app version using Ionic or Flutter
 
----
-
-Would you like this document exported as a PDF or Word file? Or should I help you create diagrams for the architecture?
